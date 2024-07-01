@@ -1,0 +1,1911 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+    background-color:rgb(206, 231, 245);
+    /* overflow-y: hidden; */
+}
+.navbar1 {
+    width: 100%;
+    background-color: rgb(239, 55, 86);
+    color: white;
+    display: flex;
+    padding:15px;
+    justify-content:space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+.navbar1 p{
+    font-size:18px;
+}
+.text {
+    display: flex;
+    margin-left: 40rem;
+    font-size: 19px;
+}
+.navbar1 ul {
+    display: flex;
+    gap: 2rem;
+}
+.navbar1 li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+i {
+    margin-right: 5px; 
+}
+/* navbar two */
+.navbar2{
+    width: 100%;
+    background-color: black;
+    padding:20px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top:52px; /* Adjust based on the height of the first navbar */
+    z-index: 999;
+}
+.navbar3 li{
+    list-style: none;
+}
+.text1{
+    position: relative;
+    color: white;
+    display: flex;
+}
+.text1 .inner-box {
+    width: 42rem;
+    height:30rem;
+    /* background-color:white;  */
+    background-color: rgb(202, 232, 251);
+    display: none; 
+    position: absolute;
+    top: calc(100%); 
+    left: 0;
+    z-index: 100;
+    padding:1rem;
+    border-radius:0 0 1rem  1rem ;
+    color: black;
+    overflow-y: auto;
+}
+.text1:hover .inner-box {
+    display: block;
+}
+.logoImage{
+    display: flex;
+    justify-content: space-between;
+}
+.logoImage img{
+    height:2rem;
+}
+input{
+    width:42rem;
+    padding:0.8rem;
+    background-color:#212121;
+    border: 1px solid wheat;
+    border-radius:0.5rem 0 0 0.5rem;
+    color: white;
+}
+input:hover{
+    border-radius:0.5rem 0 0 0;
+}
+.text1 button{
+    width: 10rem;
+    font-size:1.2rem;
+    background-color:#ffffff;
+    color: #212121;
+    outline:none;
+    cursor: pointer;
+    border: none;
+    border-radius:0 0.5rem 0.5rem 0;
+    gap:1rem;
+}
+.oneicons{
+    display: flex;
+    font-size:1.2rem;
+    align-items: center;
+}
+.threeIcons{
+    font-size:1.2rem;
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+}
+
+.inner-box-text{
+    display: flex;
+}
+.inner-box-text p{
+    margin-left: 0.5rem;
+}
+.button-inner-text{
+    display: flex;
+    gap:0.4rem;
+    margin-left:1.6rem;
+    margin-top: 1rem;
+}
+.button-inner-text button{
+    width: 7rem;
+    border-radius:5px;
+    padding:0.2rem;
+    font-size: 1rem;
+    background-color:whitesmoke;
+}
+.boxs5{
+    display: flex;
+    gap: 1rem;
+    margin-left:1.8rem;
+    margin-top:0.7rem;
+}
+.b1{
+    height:6rem;
+    width:6rem;
+    border-radius: 15px;
+    text-align: center;
+}
+#b1img{
+    background-image: url('data:image/webp;base64,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');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#b2img{
+    background-image: url("https://www.jiomart.com/images/product/original/rvhcojjual/moraze-matte-magic-liquid-lipstick-shade-of-love-3-ml-product-images-orvhcojjual-p591299808-0-202205140033.jpg?im=Resize=(420,420)");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#b3img{
+    background-image: url("https://www.dotandkey.com/cdn/shop/files/green-clay_1_360x.webp?v=1706166640");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#b4img{
+    background-image: url("https://assets.entrepreneur.com/content/3x2/2000/20151215185159-holiday-gifts-valentines-day-christmas-xmas.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#b5img{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzHzXNiDyKKCXp_GqFlTKB4XAQRzeSwKCv_peT8k8GPLqizoR1V0gMBgoH_vSPQ_Xj_7c&usqp=CAU");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.me{
+    margin-top:6.1rem;
+}
+.tow{
+    display: flex;
+}
+.tow p{
+    margin-left:0.5rem;
+}
+.inner-text-hotpic{
+    margin-top: 1rem;
+}
+.sidebar{
+    margin-top: 2rem;
+}
+.sidebar-text{
+    display: flex;
+}
+.sidebar p{
+    margin-left: 0.5rem;
+}
+.sidebar-pic{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row; 
+    gap:  1rem; 
+    overflow-x: auto;
+    white-space: nowrap; 
+    width: 100%;
+}
+.pic{
+    height:9.2rem;
+    width:15rem;
+    border: 2px solid green;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    border-radius: 10px;
+}
+#put{
+    background-image: url('https://www.lakmeindia.com/cdn/shop/files/29565_S7-8901030959899_1000x.jpg?v=1686133120');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#p1{
+    background-image: url('https://www.lakmeindia.com/cdn/shop/files/24894_S5-8901030979552_1000x.jpg?v=1709807076');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#p2{
+    background-image: url('https://images-static.nykaa.com/media/catalog/product/9/4/946f6cbLAK_8901030174766ab_8.jpg?tr=w-500');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#p3{
+    background-image: url('https://www.beautycreationscosmetics.com/cdn/shop/products/translucent-dream-loose-setting-powder-beauty-creations-bfp01-173388_1200x.jpg?v=1709253443');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#p4{
+    background-image: url('https://cdn.shopify.com/s/files/1/0906/2558/files/464576762-launch_sugar-la-la-love-18hr-liquid-lipstick-wbg-powered-by-images_01.jpg?v=1688227587');
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+#p5{
+    background-image: url('https://blpbeauty.com/cdn/shop/products/EYESHADOWDAYBREAK-01.png?v=1665237843&width=2162');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#p6{
+    background-image: url('https://rubysorganics.in/cdn/shop/products/lipstcikshootimage_b804d088-2db4-499d-8964-014ba4e5170f_1100x.jpg?v=1707901434');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#p7{
+    background-image: url('https://www.lakmeindia.com/cdn/shop/files/24272_H-8901030979545.jpg?v=1710236390');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#p8{
+    background-image: url('https://images-cdn.ubuy.co.in/64f5619aaddda3208121f98d-setting-powder-lightweight-loose-powder.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#p9{
+    background-image: url('https://5.imimg.com/data5/SELLER/Default/2023/8/337608868/ZZ/JK/AK/195680655/ladies-makeup-kit-500x500.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#p10{
+    background-image: url('https://curvissa.scene7.com/is/image/OttoUK/466w/oh-my-glam-french-kiss-red-lipstick-gift-set~28B050FRSP.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#p11{
+    background-image: url('https://lh6.googleusercontent.com/proxy/FZJUnmihNpsh9Y7NDLNr8k9oRaq8_4DkpSWaZaUaBDgjs-pf3nsDETPl2VOnrG6iL-8Wi3D86AswYArSqxN9_BA3LR-PlL6FMrnqQMnXfUFRvIF-_3HdjPTPWr26kqRtwUFU22lAh6gDD6IWLO3LqFefBPwBQDg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#p12{
+    background-image: url('https://i0.wp.com/s3.ap-south-1.amazonaws.com/img.paisawapas/images/2024/01/10122016/Best-Compact-Powder-Brands.png?fit=905%2C602&ssl=1');
+    background-size: cover;
+    background-repeat: no-repeat;
+ }
+
+/* From here i stared the navbar3 */
+.navbar3 {
+    width: 100%;
+    height: 3.5rem;
+    background-color: #141414;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 1.2rem;
+    position: fixed;
+    top: 135px; /* Adjust based on the height of the first and second navbar */
+    z-index: 998;
+}
+
+.navbar3 > div {
+    position: relative;
+    margin-right: 3rem;
+}
+
+.navbar3 a {
+    text-decoration: none;
+    color: white;
+    padding: 1.2rem 0;
+    position: relative;
+    z-index: 2;
+}
+
+.navbar3 a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: pink;
+    transition: width 0.3s ease;
+    z-index: 1;
+}
+
+.navbar3 a:hover::after {
+    width: 100%;
+    background-color: hotpink;
+}
+
+.hover-box {
+    height: 19rem;
+    width: 47rem;
+    background-color: red;
+    position: absolute;
+    /* left: calc(50% - 23.5rem);  */
+    top: 2.4rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    display: none;
+    z-index: 0; 
+}
+.navbar3 .lips:hover .hover-box {
+    display: block;
+}
+.hover-box-eye{
+    height: 21rem;
+    width: 48rem;
+    background-color: green;
+    position: absolute;
+    top: 2.4rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    display:none;
+    z-index: 0; 
+}
+.navbar3 .eyes:hover .hover-box-eye{
+    display: block;
+}
+.hover-box-face{
+    height: 23rem;
+    width: 48rem;
+    background-color: yellow;
+    position: absolute;
+    /* left: calc(50% - 23.5rem);  */
+    top: 2.4rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    display: none;
+    z-index: 0; 
+    color: red;
+}
+.navbar3 .face:hover .hover-box-face{
+    display: block;
+}
+.hover-box-skin{
+    height: 27rem;
+    width: 48rem;
+    background-color: yellow;
+    position: absolute;
+    /* left: calc(50% - 23.5rem);  */
+    top: 2.4rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    display: none;
+    z-index: 0; 
+}
+.navbar3 .skin:hover .hover-box-skin{
+    display: block;
+}
+.hover-box-ari{
+    height: 14rem;
+    width: 10rem;
+    background-color: yellow;
+    color: black;
+    position: absolute;
+    /* left: calc(50% - 23.5rem);  */
+    top: 2.4rem;                     
+    border-radius: 0 0 0.5rem 0.5rem;
+    display: none;
+    z-index: 0; 
+    padding: 1rem;
+}
+.navbar3 .accessorise:hover .hover-box-ari{
+    display: block;
+}
+.hover-box-gift{
+    height: 12rem;
+    width: 40rem;
+    background-color: yellow;
+    color: black;
+    position: absolute;
+    /* left: calc(50% - 23.5rem);  */
+    top: 2.4rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    display: none;
+    z-index: 0; 
+}
+.navbar3 .gift:hover .hover-box-gift{
+    display: block;
+}
+.hover-box-blog{
+    height:25rem;
+    width: 40rem;
+    background-color: yellow;
+    color: black;
+    position: absolute;
+    right:-27rem;
+    top:2.4rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    display:none;
+    z-index: 0; 
+}
+.navbar3 .blog:hover .hover-box-blog{
+    display: block;
+}
+.hbox h1{
+    margin-left:1rem;
+}
+.hbox ul li{
+    list-style: disc;
+    margin-left: 2rem;
+    margin-top:1rem;
+    font-size:0.8rem;
+}
+.nikbox{
+    display: flex;
+}
+.navbar3 h1:hover{
+    color:hotpink;
+}
+.play{
+    display: flex;
+    justify-content: space-between;
+    padding:0.5rem;
+}
+.inplay{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+.play1{
+    display: flex;
+    justify-content: space-between;
+    margin-top:0.2rem;
+    padding: 0.2rem;
+}
+.play2{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.play3{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.hover-box-skin{
+    color: black;
+}
+.ari{
+    padding: 1rem;
+}
+.mis{
+    margin-left: 1rem;
+}
+.gitfh1{
+    display: flex;
+    font-size:0.9rem;
+    gap:2rem;
+    padding: 1rem;
+}
+.gifth2{
+    display: flex;
+    font-size:0.9rem;
+    gap:2rem;
+    padding: 1rem;
+}
+.gifth3{
+    display: flex;
+    font-size:0.9rem;
+    gap:2rem;
+    padding: 1rem;
+}
+.bogblog{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.bigblok2{
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+}
+.hover-box-blog ul li{
+    list-style: disc;
+    margin-left: 2rem;
+    margin-top:1rem;
+}
+.hover-box-ari ul li{
+    list-style: disc;
+    margin-left: 2rem;
+    margin-top:0.3rem;
+}
+
+
+/* css of the Slider*/
+
+.slider {
+    width: 100vw;
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    margin-top:12rem;
+}
+
+.list {
+    /* width: 100%; 
+    height: 100%; */
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.list img {
+    width:200vh;
+    /* Set width to 1300px (maximum width of slider) */
+    /* height: 500vh;  */
+    object-fit: cover; 
+
+}
+
+.buttons {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.buttons button {
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+    border: none;
+    background-color: rgb(177, 150, 150);
+    color: black;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.dots {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    /* margin: 0 5px; */
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #717171;
+    width: 50px; /* Increase width for active dot */
+    border-radius: 5px;
+}
+.image1{
+    /* width: 150vw; */
+    margin-left: 20px;
+}
+.image2{
+    margin-left: 70px;
+}
+.image3{
+    margin-left: 80px;
+}
+.image4{
+    margin-left: 100px;
+}
+.image5{
+    margin-left: 70px;
+}
+
+/* Third Part Started from here */
+.second-container-image{
+    margin-top: 2rem;
+    height:80vh;
+    /* border: 2px solid  green; */
+    background-image: url('https://d32baadbbpueqt.cloudfront.net/Homepage/f2e2157b-1c8d-4885-9c59-8b4235bb18bd.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1rem;
+}
+.lines{
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1.4rem;
+    margin-top:3rem;
+}
+.lines h1{
+    font-size:1.8rem;
+}
+.line1{
+    width:8rem;
+    background-color: hotpink;
+    height:0.2rem;
+}
+.slide-container {
+    margin-top: 2rem;
+    /* left: 10rem; */
+    position: relative;
+    width: 1800px;
+    height:580px;
+    border: 3px solid #ede6d6;
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+.slides2 {
+    width: 100%;
+    height: calc(100%);
+    position: relative;
+    overflow: hidden;
+}
+.box1-slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+#b1 {
+    background-color: hotpink;
+}
+
+#b2 {
+    background-color: lightblue;
+}
+
+#b3 {
+    background-color: lightgreen;
+}
+
+#b4 {
+    background-color: lightcoral;
+}
+
+#b5 {
+    background-color: lightgoldenrodyellow;
+}
+
+#b6 {
+    background-color: lightgray;
+}
+
+#b7 {
+    background-color: lightseagreen;
+}
+
+.box1-slide:not(.active) {
+    top: 0;
+    left: -100%;
+}
+
+.active {
+    left: 0 !important;
+}
+
+span.pre1,
+span.next2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 14px;
+    color: red;
+    font-size:35px;
+    font-weight: bold;
+    transition: 0.5s;
+    border-radius: 3px;
+    user-select: none;
+    cursor: pointer;
+    z-index: 1;
+    display: none;
+}
+.slide-container:hover span.pre1,
+.slide-container:hover span.next2 {
+    display: block;
+}
+span.pre1 {
+    left: 20px;
+}
+.dispay{
+    display: flex;
+    margin-left:5rem;
+    margin-top: 1.5rem;
+    gap:0.9rem;
+
+}
+.little-box{
+    width: 25rem;
+    height: 8rem;
+    border-radius: 5px;
+    border: 2px solid black;
+    position: absolute; 
+    top: 15rem;
+    z-index: 4;
+    left: 45rem;
+    display: none;
+}
+.dispay-box{
+    height:33rem;
+    width: 25rem;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 10px;
+}
+.dispay-box img{
+    height:15rem;
+    width: 22rem;
+    border-radius: 5px;
+    margin-left:0.6rem;
+}
+.dispay-box p{
+    font-size:1.3rem;
+    text-align: center;
+}
+.price{
+    text-align:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:0.4rem;
+    font-size:1.5rem;
+}
+span.next2 {
+    right: 20px;
+}
+span.next2:hover,
+span.pre1:hover {
+    background-color: #ede6d6;
+    opacity: 0.8;
+    color: #222;
+}
+@keyframes next1 {
+    from {
+        left: 0%;
+    }
+
+    to {
+        left: -100%;
+    }
+}
+@keyframes next2 {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 0%;
+    }
+}
+
+#btn{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.meri-pic{
+    height: 20rem;
+    width: 40rem;
+    border: 2px solid red;
+}
+.priceimg{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top:0.7rem;
+    gap:0.3rem;
+}
+.priceimg img{
+    height:2rem;
+    width: 5rem;
+    border-radius:10px;
+}
+.give-star{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+.give-left{
+    margin-top:0.3rem;
+}
+.Click-Heart{
+    display: flex;
+    gap:1rem;
+    margin-top:1rem;
+}
+.Click-Heart .Select-Btn{
+    width:18rem;
+    cursor: pointer;
+    border-radius:8px;
+    outline: none;
+    background-color:black;
+    color: white;
+    border: none;
+}
+.mouse{
+    margin-top:1rem;
+}
+.sades{
+    margin-top:0.6rem;
+}
+.price{
+    margin-top:0.8rem;
+}
+.click-btn{
+    height:3rem;
+    width: 3.5rem;
+    border: 1px solid black;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border-radius: 15px;
+    margin-left: 2rem;
+}
+
+
+/* form here the 4 part has startted */
+.third-slidebar-container{
+    height:53vh;
+    border: 2px solid red;
+    background-color: ghostwhite;
+    padding:0.4rem;
+}
+.black-cloro{
+    color: #141414;
+}
+
+.slide-container-3 {
+    position: relative;
+    width: 1820px;
+    height:400px;
+    /* border: 5px solid gold; */
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.slides3 {
+    width: 100%;
+    height: calc(100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.box-3-1-slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+.box-3-1-slide:not(.active3) {
+    top: 0;
+    left: -100%;
+}
+
+.active3 {
+    left: 0 !important;
+}
+.pre-3-1,
+.next-3-1 {
+position: absolute;
+/* top: 50%; */
+top: 40%;
+transform: translateY(-50%);
+padding:2px;
+color: red;
+font-size: 35px;
+font-weight: bold;
+transition: 0.5s;
+border-radius: 50%; /* Makes the button circular */
+user-select: none;
+cursor: pointer;
+z-index: 1;
+width: 50px; /* Fixed width */
+height: 50px; /* Fixed height */
+text-align: center; /* Centers the content horizontally */
+line-height: 50px; /* Centers the content vertically */
+background-color: white;
+}
+
+.pre-3-1 {
+left: 150px;
+}
+
+.next-3-1 {
+right: 150px;
+}
+
+@keyframes next1 {
+    from {
+        left: 0%;
+    }
+
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes next2 {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 0%;
+    }
+}
+.boxs-3-1{
+    height:23rem;
+    width: 35rem;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.boxes-3{
+    display: flex;
+    justify-content: space-evenly;
+}
+.boxs-3-1 img{
+    height:22.8rem;
+    width: 34.8rem;
+    border-radius: 10px;
+}
+/* this is the 5 part of my code */
+.container-slider-5{
+    background-image: url('https://d32baadbbpueqt.cloudfront.net/Homepage/027f3555-a5e3-44eb-99ad-1396391f6093.jpg');
+    height:38rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 5rem;
+    /* border: 2px solid blue; */
+    /* padding:1rem; */
+}
+.slide-container-5 {
+    position: relative;
+    width: 1800px;
+    height: 600px;
+    /* border: 9px solid gold; */
+    overflow: hidden;
+}
+
+.slides-5-3 {
+    width: 100%;
+    height: calc(100%);
+    position: relative;
+    overflow: hidden;
+}
+.box-5-1-slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+.box-5-1-slide:not(.active3) {
+    top: 0;
+    left: -100%;
+}
+.active5 {
+    left: 0 !important;
+}
+.pre-5-1,
+.next-5-1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 2px;
+    color: red;
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.5s;
+    border-radius: 50%;
+    user-select: none;
+    cursor: pointer;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: yellow;
+}
+
+.pre-5-1 {
+    /* left: 0px; */
+    /* left: 50%; */
+    left: 1px;
+}
+
+.next-5-1 {
+    /* right: -1%; */
+    /* right: 50%; */
+    right: 1px;
+}
+
+@keyframes next1 {
+    from {
+        left: 0%;
+    }
+
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes next2 {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 0%;
+    }
+}
+
+.boxes-5-1 {
+    height:30.9rem;
+    width: 24rem;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    box-shadow: 1px 1px 5px 2px rgb(239, 237, 237);
+}
+.boxes-5-1 p{
+    margin-left: 2rem;
+    font-size: 1.1rem;
+}
+.boxes-5 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 4rem;
+}
+.card{
+    height:15rem;
+    width:17rem;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    margin-left:3.8rem;
+}
+.boxes-5-1 .price{
+    color: red;
+}
+.shade{
+    margin-left:10rem;
+    text-align: center;
+    font-size:1.5rem;
+}
+.boxes-5-1 .priceimg{
+    display: flex;
+    gap: 0rem;
+}
+.give-star {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+}
+.give-star i {
+    margin-right: 0.2rem; 
+    font-size:1.2rem;
+}
+.give-star p {
+    margin: 0; 
+    font-size:1.2rem;
+}
+.boxes-5-1.priceimg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+.boxes-5-1 .Click-Heart {
+    margin: 0;
+    padding: 0.3rem;
+}
+.boxes-5-1 .check{
+    margin-top:1.7rem;
+}
+.boxes-5-1 .priceimg {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 0.4rem;
+    color: red;
+}
+.boxes-5-1 .priceimg img {
+    height:1.7rem;
+    width: 5rem;
+    border-radius: 10px;
+    margin: 0; 
+    padding: 0; 
+}
+.boxes-5-1 .priceimg p {
+    margin: 0; 
+    padding: 0;
+    line-height: 2rem;
+    font-size:1.2rem;
+}
+.card img{
+    height:14.8rem;
+    width: 16.8rem;
+    border-radius:8px;
+}
+
+/* this is the 6 part of my code and i will start from here */
+.container6{
+    height: 100vh;
+    border: 2px solid black;
+    background-color: whitesmoke;
+    padding:20px;
+}
+.big-image{
+    height:20rem;
+    width: 110rem;
+    border-radius:20px;
+    background-image:url('https://d32baadbbpueqt.cloudfront.net/Clubvellvette/backCv0010.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 1rem;
+    padding:5rem;
+    margin-left:1rem;
+}
+.play-both-pic{
+    display: flex;
+}
+.write-your-text{
+    height:15rem;
+    color: white;
+    margin-left:9rem;
+}
+.write-your-text h1{
+    font-size:3rem;
+}
+.write-your-text .Pink{
+    color:hotpink;
+    font-size: 3rem;
+    border: none;
+    background: none;
+    font-weight: 900;
+    cursor: pointer;
+}
+.play-both-pic img{
+    height:10rem;
+    width: 20rem;
+    border-radius: 10px;
+}
+.container6 .lines{
+    margin-top:1rem;
+}
+.slide-container-6{
+    margin-top:1rem;
+    position: relative;
+    width: 1800px;
+    height:450px;
+    /* border: 3px solid red; */
+    /* box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2); */
+    overflow: hidden;
+}
+
+.slides-6-3 {
+    width: 100%;
+    height: calc(100%);
+    position: relative;
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Slide transition duration */
+}
+
+.box-6-1-slide {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pre-6-1,
+.next-6-1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 2px;
+    color: red;
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.5s; /* Button transition */
+    border-radius: 50%;
+    user-select: none;
+    cursor: pointer;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: white;
+}
+
+.pre-6-1 {
+    left: 100px;
+}
+
+.next-6-1 {
+    right: 100px;
+}
+
+.boxes-6-1 {
+    height: 30rem;
+    width: 25rem;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+}
+.boxes-6 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top:2rem;
+}
+.card6{
+    height:25rem;
+    width:35rem;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+}
+.card6 img{
+    border-radius:8px;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* this is the 7 part of the code and i will do it here */
+.container7{
+    height: 40rem;
+    width: 100%;
+    background-image: url('https://d32baadbbpueqt.cloudfront.net/Homepage/7889f7d5-47ea-4aee-a760-22c4514a1999.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+.container7 .lines{
+    color: red;
+    /* background-color: yellow; */
+    margin-top: 0;
+}
+.container7 .lines h1{
+    color: white;
+}
+
+.con7 {
+    position: relative;
+    width: 1800px;
+    height:600px;
+    /* border: 3px solid #ede6d6; */
+    /* box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2); */
+    overflow: hidden;
+    margin-left:1rem;
+}
+.slides-7-3 {
+    width: 100%;
+    height: calc(100%);
+    position: relative;
+    overflow: hidden;
+}
+.con-box7 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+.con-box7:not(.active7) {
+    top: 0;
+    left: -100%;
+}
+
+.active7 {
+    left: 0 !important;
+}
+
+.pre-7-1,
+.next-7-1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 2px;
+    color: red;
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.5s;
+    border-radius: 50%;
+    user-select: none;
+    cursor: pointer;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: gainsboro;
+}
+
+.pre-7-1 {
+    left:50px;
+}
+
+.next-7-1 {
+    right:50px;
+}
+
+@keyframes next1 {
+    from {
+        left: 0%;
+    }
+
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes next2 {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 0%;
+    }
+}
+.box7 {
+    height: 30rem;
+    width: 25rem;
+    /* border: 2px solid white; */
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+}
+
+.boxes-7 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 4rem;
+}
+.card7 {
+    height: 15rem;
+    width: 17rem;
+    border-radius: 10px;
+    margin-left: 3.8rem;
+}
+.card7 img{
+    height:100%;
+    width: 100%;
+    border-radius: 7px;
+}
+.box7 .price{
+    margin-top:1rem;
+}
+.box7 .priceimg{
+    margin-top:1.5rem;
+    gap:1rem;
+}
+ .box7 .give-star{
+    margin-top:1.9rem;
+ }
+
+ /* this is the part 8 of this code and here i will  write   code  for  8 part*/
+ .part8{
+    height:115rem;
+    border: 2px solid green;
+    background-color: ghostwhite;
+    padding:0.9rem;
+ }
+ .con-8 {
+    position: relative;
+    width: 1800px;
+    height: 500px;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+.box8 .boxes-6{
+    gap:1rem;
+    margin-top:0;
+}
+.slides8 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.box-8 {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    color: white;
+    background-color: hotpink;
+}
+.pre8,
+.next8 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: red;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: white;
+    border-radius: 50%;
+}
+.pre8 {
+    left: 150px;
+}
+.next8 {
+    right: 150px;
+}
+.lips-pic{
+    height:35rem;
+    /* border: 2px solid red; */
+    width: 80rem;
+    border-radius: 10px;
+    margin-top:2rem;
+    margin-left: 15.5rem;
+}
+.lips-pic img{
+    height:100%;
+    width: 100%;
+    border-radius:8px;
+}
+.EarnMoney{
+    height: 26rem;
+    border-radius: 15px;
+    width: 110rem;
+    margin-left:1.3rem;
+}
+.EarnMoney img{
+    height: 100%;
+    width: 100%;
+    border-radius:15px;
+}
+.part9{
+    height:40rem;
+    /* border: 2px solid gold; */
+    background-image:url('https://d32baadbbpueqt.cloudfront.net/Homepage/b109faa2-cf00-407f-b9a5-d2bd2860a6e2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding:30px;
+}
+.part9 .lines{
+    margin-top: 0;
+}
+.part9 .lines h1{
+    color: white;
+}
+.NoMoveSlide{
+    margin-top: 1rem;
+    height: 32rem;
+    width: 110rem;
+    /* border: 2px solid lightcoral; */
+    display: flex;
+    gap: 2rem;
+    padding:1rem;
+    margin-left:1rem;
+}
+
+/* from here i started the 10 part of this code  */
+.part10{
+    height:37rem;
+    /* border: 2px solid hotpink; */
+    background-color:ghostwhite;
+    padding: 20px;
+}
+.part10 .lines{
+    margin-top: 0;
+}
+.con-10 {
+    position: relative;
+    width: 1800px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.slides10 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.box-10 {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    color: white;
+}
+.pre10,
+.next10 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: red;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    user-select: none;
+}
+
+.pre10 {
+    left: 150px;
+}
+
+.next10 {
+    right: 150px;
+}
+.box10 .boxes-6{
+    display: flex;
+    gap: 2rem;
+}
+
+/* this is the part 11 */
+.con11 {
+    position: relative;
+    width: 1835px;
+    height:520px;
+    overflow: hidden;
+    /* border: 2px solid red; */
+}
+.container11{
+    height:37rem;
+    background-color: ghostwhite;
+    border-bottom:2px solid gray;
+}
+.container11 .lines{
+    margin-top: 0;
+}
+.slides-11-3 {
+    width:110rem;
+    height: calc(100%);
+    position: relative;
+    overflow: hidden;
+    margin-left:2rem;
+}
+.con-box11 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    display: flex;
+    justify-content:space-around;
+    padding: 1rem;
+}
+.con-box11:not(.active11) {
+    top: 0;
+    left: -100%;
+}
+
+.active11 {
+    left: 0 !important;
+}
+
+.pre-11-1,
+.next-11-1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 2px;
+    color: red;
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.5s;
+    border-radius: 50%;
+    user-select: none;
+    cursor: pointer;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: white;
+}
+
+.pre-11-1 {
+    left:0px;
+}
+.next-11-1 {
+    right:0px;
+}
+
+@keyframes next1 {
+    from {
+        left: 0%;
+    }
+
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes next2 {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 0%;
+    }
+}
+
+.box11 {
+    height: 30rem;
+    width: 25rem;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.boxes-11 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 4rem;
+}
+.card11 {
+    height: 15rem;
+    width: 17rem;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 3.8rem;
+}
+
+/* this is the 12 part of this code  */
+.con12{
+    background-color: ghostwhite;
+    padding: 1rem;
+    /* height:93rem; */
+    height: auto;
+    border: 2px solid red;
+    position: relative;
+}
+.con12 h1{
+    font-size: 1.5rem;
+}
+
+.print{
+    display: flex;
+    gap:0.4rem;
+}
+.print span{
+    font-size:3rem;
+    color: hotpink;
+}
+.print h1{
+    margin-top:0.8rem;
+}
+
+
+/* 13 part is here */
+.Email{
+    height:27rem;
+    background-image: url('https://in.sugarcosmetics.com/desc-images/Rectangle_background.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid gold;
+}
+.Email .lines{
+    margin-top:0;
+}
+.Email .lines h1,.line1{
+    margin-top: 2rem;
+}
+.intoCenter{
+    text-align: center;
+    padding:1.5rem;
+}
+.intoCenter p{
+    font-size:1.2rem;
+}
+.intoCenter input{
+    margin-top:2rem;
+    height:3rem;
+    background-color: whitesmoke;
+    border-radius:10px 0 0 10px;
+    outline: none;
+    color: #141414;
+    font-size: 1rem;
+    border: 1px solid black;
+    margin-right: 0;
+}
+.intoCenter button{
+    cursor: pointer;
+    font-size:1rem;
+    width: 13rem;
+    height:3rem;
+    border-radius:0 10px 10px 0;
+    border: none;
+    background-color: black;
+    color: white;
+    margin-left: 0;
+}
+
+/* last part of the code */
+.logomade{
+    height:200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 15px solid black;
+    background-image: url('https://www.freepnglogos.com/uploads/s-letter-logo-png-9.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.movecenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left:50rem;
+    top:611rem;
+    z-index: 4;
+    /* Ensure z-index is higher than footer */
+    /* position: absolute; */
+     /* Change back to absolute positioning */
+    /* bottom:-7600px; */
+     /* Adjust this value based on your layout */
+    /* left: 50rem;  */
+    /* Adjust this value based on your layout */
+    /* transform: translateX(-50%);  */
+    /* Center horizontally */
+    /* z-index: 10; */
+     /* Ensure z-index is higher than footer */
+}
+footer{
+    background-color:black;
+    height:56rem;
+    position: relative;
+    z-index:2;
+    color: white;
+}
+.flex{
+    margin-left:52.6rem;
+    z-index: 7;
+    position: absolute;
+    top:7rem;
+}
+
+.icons-party {
+    margin-right: 30rem;
+    margin-left:40rem;
+    position: absolute;
+    top: 11rem;
+}
+.icons-party a {
+    display: inline-block;
+    width: 50px; 
+    height: 50px; 
+    line-height: 50px; 
+    margin: 0 15px; 
+    border-radius: 50%; 
+    background-color: whitesmoke; 
+    text-align: center;
+}
+
+.icons-party a i {
+    font-size: 2rem; 
+    color: black; 
+    text-align: center;
+    margin-top:0.5rem;
+}
+.printline{
+    height:2rem;
+    width:110rem;
+    color: white;
+    top:14rem;
+    position: absolute;
+    border-bottom: 2px solid hotpink;
+    left: 2rem;
+}
+#newline{
+    top: 20rem;
+}
+#newline2{
+    top: 22rem;
+    height:19rem;
+    padding:2rem;
+}
+.small{
+    font-size:2rem;
+}
+.prinUl{
+    margin-top:18rem;
+    position: absolute;
+    left:32rem;
+}
+.prinUl ul{
+    display: flex;
+    text-align: center;
+    justify-items: center;
+    gap:5rem;
+    font-size:1.4rem;
+}
+.prinUl ul li{
+    list-style: none;
+}
+.prinUl ul li:hover{
+    text-decoration: underline;
+}
+.oneline{
+    display: flex;
+    justify-content: space-between;
+}
+.text-pin{
+    margin-top: 2rem;
+}
+.text-pin .mini{
+    font-size:1.7rem;
+    font-weight:900px;
+}
+.text-pin p{
+    margin-top:1rem;
+    font-size: 1.2rem;
+}
+.midal{
+    position: absolute;
+    top: 43rem;
+    text-align: center;
+    left:33rem;
+    display: flex;
+}
+.playsotre{
+    height:3rem;
+    width: 12rem;
+    border-radius:0.4rem;
+}
+.playsotre img{
+    height:100%;
+    width: 100%;
+}
+.playpic{
+    display: flex;
+    gap:1rem;
+    margin-top:0.4rem;
+    margin-left: 1rem;
+}
+#end{
+    top: 50rem;
+    width:120rem;
+    left: 0;
+}
+#end p{
+    margin-top:4rem;
+    margin-left:45rem;
+    font-size:1.3rem;
+}
+.longText{
+    padding:1rem;
+    /* display: none; */
+}
+.textmargin{
+    margin-top: 1rem;
+}
