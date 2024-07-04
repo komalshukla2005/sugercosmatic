@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopping Bag</title>
+  <link rel="stylesheet" href="accessories.css" />
+</head>
+<body>
+  <!-- here is css code -->
+    <style>
+        body{
+            background-color: pink;
+        }
+        .bagHeading{
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 1.5rem;
+        }
+        #bagItems{
+            display: flex;
+            gap: 2rem;
+            margin-top: 4rem;
+            margin-left: 3rem;
+        }
+        .cart-item{
+            background-color: #fff;
+            width: 14rem;
+            height: 18rem;
+            border-radius: 0.5rem;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+        .cart-item img{
+            width: 12rem;
+            aspect-ratio: 3/2;
+            object-fit: contain;
+        }
+        .bag-price{
+            color: grey;
+            font-size: 0.8rem;
+        }
+        .bag-name{
+            font-size: 0.8rem;
+        }
+        .cart-item button{
+            padding: 5px;
+            width: 10rem;
+            background-color: red;
+            color: #ede7e7;
+            border: none;
+            border-radius: 0.3rem;
+            cursor: pointer;
+        }
+        .cart-item button:hover{
+            background-color: rgb(199, 14, 14);
+        }
+    </style>
+    
+    <h1 class="bagHeading">Your Shopping Bag</h1>
+    <div id="bagItems"></div>
+
+  <!-- here is javascript code  -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const bagItemsDiv = document.getElementById('bagItems');
+      const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+      if (cartItems.length === 0) {
+        bagItemsDiv.innerHTML = '<p>Your bag is empty.</p>';
+      } else {
+        cartItems.forEach(item => {
+          const itemDiv = document.createElement('div');
+          itemDiv.classList.add('cart-item');
+          itemDiv.dataset.id = item.id;
+          itemDiv.innerHTML = `
+            <img src="${item.image}" alt="${item.name}" />
+            <p class="bag-name">${item.name}</p>
+            <p class="bag-price">${item.price}</p>
+            <button class="remove-btn">Remove</button>`;
+            bagItemsDiv.appendChild(itemDiv);
+        });
+      }
+      const removeButtons = document.querySelectorAll('.remove-btn');
+      removeButtons.forEach(button=>{
+        button.addEventListener("click",(event)=>{
+          const card = event.target.closest('.cart-item');
+          const itemId = card.dataset.id;
+          card.remove();
+          const removeCart = cartItems.filter(item=>item.id !== itemId);
+          localStorage.setItem('cartItems',JSON.stringify(removeCart));
+          if(removeCart.length===0){
+            bagItemsDiv.innerHTML = `<p>Your bag is empty!.</p>`
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
