@@ -479,3 +479,205 @@ body{
     text-align: center;
     margin-top: 2rem;
 }
+
+/* Here is media query for responsiveness */
+
+/*for tablet device*/
+@media(max-width: 768px){
+    .first-cont, .navbar, .navbar-links, .advertisment-eye img, .home{
+        width: 765px;
+    }.first-heading{
+        font-size: 12px
+    }.icons p{
+        font-size: 7px;
+    }.navbar-gif img{
+        width: 40px;
+        height: 30px;
+    }.navbar-input input{
+        width: 288px;
+        padding: 7px;
+    }.navbar-search-button{
+        padding: 7px;
+        padding-bottom: 10px;
+    }.navbar-search-button button, .fa-search{
+        font-size: 0.7rem;
+    }.fa-circle-user{
+        font-size: 0.9rem;
+    }.navbar-three-icons a, .login-register-icon p{
+        font-size: 0.7rem;
+    }.navbar-links{
+        font-size: 8px;
+    }.complimentary-foundation img{
+        width: 650px;
+    }.gift-img img{
+        width: 3.5rem;
+        left: 92%;
+        top: 72%;
+    }.home{
+        font-size: 0.8rem;
+    }.dropdown{
+        margin-left: 3rem;
+        width: 12rem;;
+    }.dropbtn{
+        padding: 15px;
+        font-size: 13px;
+    }.dropdown-content label{
+        padding: 8px 9px;
+        font-size: 12px;
+    }.filter-section{
+        padding: 8px;
+        width: 12rem;
+        height: 18rem;
+        gap: 1rem;
+    }.cards{
+        grid-template-columns: repeat(2, 1fr);
+        left: 30%;
+        top: -27%;
+    }.card{
+        width: 13rem;
+        height: 19rem;
+        padding: 15px;
+        gap: 0.9rem;
+    }.head-1{
+        padding-left: 10px;
+        font-size: 0.6rem;
+    }.head-2{
+        padding-left: 2px;
+        font-size: 0.5rem;
+    }.card img{
+        width: 6rem;;
+    } .rate, .rating p{
+        font-size: 0.7rem;
+    }.rating img{
+        width: 1rem;
+        height: 1rem;
+    }.price p{
+        font-size: 0.7rem;
+    }.cart button{
+        width: 6rem;
+        font-size: 0.6rem;
+    }.heart i{
+        padding-left: 5.5px;
+    }
+    .contact-details{
+        top: 42rem;
+        left: 9rem;
+        gap: 1rem;
+    }
+    .input-contact{
+        top: 90px;
+        right: -30px;
+        left: -60px;
+    }
+    .input-contact input{
+        width: 480px;
+        padding: 10px;
+    }
+    .sugar-image{
+        top: 107rem;
+        left: 20rem;
+    }
+    .sugar-image img{
+        width: 6rem;
+        height: 6rem;
+    }
+    .footer{
+        bottom: -119rem;
+        width: 765px;
+        height: 130vh;
+    }
+    .allIcons i{
+        font-size: 1.2rem;
+    }
+    .horizontal-line{
+        margin: 2rem 3rem 0 3rem;
+    }
+    .about-page{
+        font-size: 1rem;
+    }
+    .store img{
+        width: 5rem;
+    }
+    .gdata p{
+        font-size: 0.7rem;
+    }
+    .footer-line h3{
+        font-size: 0.8rem;
+    }
+    .allInformation{
+        margin-right: 70px;
+    }
+    .getInformation{
+        gap: 15px;
+    }
+    .allInformation h1{
+        font-size: 1.2rem;
+    }
+    .information h3{
+        font-size: 0.7rem;
+    }
+    .information h4, .information p{
+        font-size: 0.6rem;
+    }
+    
+}
+
+/*for mobile device*/
+@media(max-width: 480px ){
+   .first-heading{
+        font-size: 14px
+    }.icons p{
+        font-size: 9px;
+    }.fa-circle-user{
+        font-size: 1rem;
+    }.navbar-three-icons a, .login-register-icon p{
+        font-size: 0.9rem;
+    }.navbar-links{
+        font-size: 9px;
+    }.complimentary-foundation img{
+        width: 632px;
+        margin-left: 2rem;
+    }.gift-img img{
+        width: 3.5rem;
+        left: 92%;
+        top: 45%;
+    }.cards{
+        left: 50%;
+        top: -27%;
+    }
+    .contact-details{
+        left: 10rem;
+    }
+    .contact-details p{
+        width: 32rem;
+    }
+    .input-contact{
+        top: 100px;
+    }
+    .input-contact input{
+        width: 480px;
+        padding: 10px;
+    }
+    .sugar-image{
+        left: 20rem;
+    }
+}@media(max-width: 450px){
+    .cards{
+        left: 60%;
+    }
+}
+@media(max-width: 370px){
+    .cards{
+        left: 70%;
+    }
+}
+@media(max-width: 330px){
+    .cards{
+        left: 80%;
+    }
+}
+@media(max-width: 268px){
+    .cards{
+        left: 102%;
+    }
+}
