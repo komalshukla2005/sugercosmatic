@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SUGAR Cosmetics - Offers</title>
+    <link
+      rel="icon"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSccQougpmskhjxbewito2_0HMZToEpwtyUaw&usqp=CAU"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-gif">
+        <img src="images/image.gif" alt="gift gif" />
+      </div>
+      <div class="navbar-input">
+        <input type="text" placeholder="Try Liquid Lipstick" />
+        <div class="navbar-search-button">
+          <i class="fa-solid fa-search"></i>
+          <button>Search</button>
+        </div>
+      </div>
+      <div class="login-register-icon">
+        <i class="fa-solid fa-circle-user"></i>
+        <p>Login/Register</p>
+      </div>
+      <div class="navbar-three-icons">
+        <a href="#"><i class="fa-solid fa-heart"></i></a>
+        <a href="bag.html" id="bagIcon"
+          ><i class="fa-solid fa-bag-shopping"></i
+        ></a>
+        <a href="#"><i class="fa-solid fa-gear"></i></a>
+      </div>
+    </nav>
+    <div class="navbar-links">
+      <p>SUGAR PLAY</p>
+      <p>LIPS</p>
+      <p>EYES</p>
+      <p>FACE</p>
+      <p>NAILS</p>
+      <p>SKINCARE</p>
+      <p>ACCESSORIES</p>
+      <p>GIFTING</p>
+      <p>BESTSELLERS</p>
+      <p>NEW LAUNCHERS</p>
+      <p>OFFERS</p>
+      <p>BLOGS</p>
+    </div>
+
+    <div class="main-container">
+      <div class="container">
+        <p class="home">Home</p>
+        <p class="home">></p>
+        <p>Offer</p>
+      </div>
+    </div>
+
+    <h2 class="offer"><span>―</span> OFFERS <span>―</span></h2>
+
+    <div class="offer-container">
+      <div class="offer-card">
+        <img src="./images/photo1.jpg" alt="Offer Image" />
+        <div class="code-container">
+          <p class="offer-code" onclick="copyCode(this)">B22G1DEALS1</p>
+          <div class="copy-message">✔Code copied!</div>
+        </div>
+      </div>
+      <div class="offer-card">
+        <img src="./images/photo2.jpg" alt="Offer Image" />
+        <div class="code-container">
+          <p class="offer-code" onclick="copyCode(this)">DEALSAT3001</p>
+          <div class="copy-message">✔Code copied!</div>
+        </div>
+      </div>
+      <div class="offer-card">
+        <img src="./images/photo3.jpg" alt="Offer Image" />
+        <div class="code-container">
+          <p class="offer-code" onclick="copyCode(this)">FREEPALETTE</p>
+          <div class="copy-message">✔Code copied!</div>
+        </div>
+      </div>
+      <div class="offer-card">
+        <img src="./images/photo4.jpg" alt="Offer Image" />
+        <div class="code-container">
+          <p class="offer-code" onclick="copyCode(this)">SUGARCOS400</p>
+          <div class="copy-message">✔Code copied!</div>
+        </div>
+      </div>
+      <div class="offer-card">
+        <img src="./images/photo5.jpg" alt="Offer Image" />
+        <div class="code-container">
+          <p class="offer-code" onclick="copyCode(this)">MUSE599GRT8</p>
+          <div class="copy-message">✔Code copied!</div>
+        </div>
+      </div>
+      <div class="offer-card">
+        <img src="./images/photo6.jpg" alt="Offer Image" />
+        <div class="code-container">
+          <p class="offer-code" onclick="copyCode(this)">GIFTSBOX799</p>
+          <div class="copy-message">✔Code copied!</div>
+        </div>
+      </div>
+      <div class="offer-card">
+        <img src="./images/photo7.jpg" alt="Offer Image" />
+        <div class="code-container">
+          <p class="offer-code" onclick="copyCode(this)">MAKUPBOX699</p>
+          <div class="copy-message">✔Code copied!</div>
+        </div>
+      </div>
+      <div class="offer-card">
+        <img src="./images/photo8.jpg" alt="Offer Image" />
+        <div class="code-container">
+          <p class="offer-code" onclick="copyCode(this)">GIFTBOX1299</p>
+          <div class="copy-message">✔Code copied!</div>
+        </div>
+      </div>
+      <div class="offer-card">
+        <img src="./images/photo9.jpg" alt="Offer Image" />
+        <div class="code-container">
+          <p class="offer-code" onclick="copyCode(this)">GIFTPACK499</p>
+          <div class="copy-message">✔Code copied!</div>
+        </div>
+      </div>
+      <div class="offer-card">
+        <img src="./images/photo10.jpg" alt="Offer Image" />
+        <div class="code-container">
+          <p class="offer-code" onclick="copyCode(this)">GIFTBOX1999</p>
+          <div class="copy-message">✔Code copied!</div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="touch"><span>―</span> LET’S STAY IN TOUCH <span>―</span></h2>
+    <p class="para">
+      Get the latest beauty tips straight to your inbox. Can’t wait to connect!
+    </p>
+
+    <form action="/subscribe.php" method="post" class="subscribe-form">
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter Email..."
+        required
+      />
+      <button type="submit" id="btn-subscribe">SUBSCRIBE</button>
+    </form>
+    <div class="sugar-cosmetics">
+      <div class="sugar-image">
+        <img src="images/Footer_sugar_icon.svg" alt="sugar-cosmetics icon" />
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="allIcons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-solid fa-envelope"></i>
+        <i class="fa-brands fa-pinterest"></i>
+      </div>
+      <hr class="horizontal-line" />
+      <div class="about-page">
+        <p>Stores</p>
+        <p>Elite</p>
+        <p>Terms & Conditions</p>
+        <p>Returns</p>
+        <p>FAQs</p>
+        <p>About Us</p>
+      </div>
+      <hr class="horizontal-line" />
+      <div class="allInformation">
+        <h1>GET IN TOUCH</h1>
+        <div class="getInformation">
+          <div class="information">
+            <h3>Call us at</h3>
+            <h4>1800-209-9933</h4>
+            <p>Monday to Friday: 09:00 AM - 09:00 PM</p>
+            <p>Saturday: 09:00 AM - 07:00 PM</p>
+          </div>
+          <div class="information">
+            <h3>Support</h3>
+            <h4>hello@sugarcosmetics.com</h4>
+          </div>
+          <div class="information">
+            <h3>Careers</h3>
+            <h4>We're hiring!</h4>
+          </div>
+          <div class="information">
+            <h3>Press & Media</h3>
+            <h4>pr@sugarcosmetics.com</h4>
+          </div>
+          <div class="information">
+            <h3>Influencer Collab</h3>
+            <h4>Join Us</h4>
+          </div>
+        </div>
+      </div>
+      <hr class="horizontal-line" />
+      <div class="googleData">
+        <div class="gdata">
+          <h4>GET THE NEW SUGAR APP TODAY!</h4>
+          <p>Tap into a better shopping experience.</p>
+        </div>
+        <div class="store">
+          <img src="images/playstore.png" alt="playstore" />
+        </div>
+        <div class="store">
+          <img src="images/apple-store.png" alt="apple store" />
+        </div>
+      </div>
+      <hr class="lines" />
+      <div class="footer-line">
+        <h3>Copyright © 2024 SUGAR Cosmetics. All rights reserved.</h3>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
