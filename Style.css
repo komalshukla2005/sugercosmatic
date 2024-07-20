@@ -1647,9 +1647,7 @@ right: 150px;
 .con12{
     background-color: ghostwhite;
     padding: 1rem;
-    /* height:93rem; */
     height: auto;
-    /* border: 2px solid red; */
     position: relative;
 }
 .con12 h1{
