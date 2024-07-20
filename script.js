@@ -290,31 +290,60 @@ function updateSlidePosition10() {
     slidesContainer10.style.transform = `translateX(${-index10 * 100}%)`;
 }
 
-// this is the 11 part of this code
-let choseImage11 = document.querySelectorAll('.con-box11');
-let next11 = document.querySelector('.next-11-1');
-let prev11 = document.querySelector('.pre-11-1');
-let counter11 = 0;
+// This is the text part of this code ;
+let showText = document.querySelector('.print');
+let longText = document.querySelector('.longText');
 
-next11.addEventListener('click', nextSlide11);
-prev11.addEventListener('click', prevSlide11);
+showText.addEventListener('click', () => {
 
-function nextSlide11() {
-    choseImage11[counter11].classList.remove('active11');
-    choseImage11[counter11].style.animation = 'next1 1s ease-in forwards';
-    choseImage11[counter11].style.animation = '0.3s';
-    counter11 = (counter11 + 1) % choseImage11.length;
-    choseImage11[counter11].classList.add('active11');
-    choseImage11[counter11].style.animation = 'next2 1s ease-in forwards';
-    choseImage11[counter11].style.animation = '0.3s';
+    if (longText.style.display === 'block') {
+        longText.style.display = 'none';
+        showText.style.backgroundColor = 'white';
+
+    } else {
+        longText.style.display = 'block';
+        showText.style.backgroundColor = 'grey';
+    }
+});
+
+// this is the Subscribe Part of this code //
+let inputValue = document.querySelector('.bottam-input');
+let inputButton = document.querySelector('.bootam-button');
+let showValueOnUI = document.querySelector('.Check-Value');
+
+inputButton.addEventListener('click', function () {
+    let email = inputValue.value.trim();
+    if (isValidEmail(email)) {
+        console.log(email);
+        showValueOnUI.textContent = 'You have logged in successfully...';
+        inputValue.value = '';
+    } else {
+        console.log('Invalid email');
+        showValueOnUI.textContent = 'Please enter a valid email...';
+        inputValue.value = '';
+    }
+    setTimeout(function () {
+        showValueOnUI.textContent = '';
+    }, 5000);
+});
+
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
 }
-
-function prevSlide11() {
-    choseImage11[counter11].classList.remove('active11');
-    choseImage11[counter11].style.animation = 'next2 1s ease-in forwards';
-    choseImage11[counter11].style.animation = '0.3s';
-    counter11 = (counter11 - 1 + choseImage11.length) % choseImage11.length;
-    choseImage11[counter11].classList.add('active11');
-    choseImage11[counter11].style.animation = 'next1 1s ease-in forwards';
-    choseImage11[counter11].style.animation = '0.3s';
-}
+let stars = document.querySelectorAll('.click-btn');
+let ShowBoxes_Little = document.querySelector('.little-box');
+let cancelBtn1=document.querySelector('.cancel-btn1')
+cancelBtn1.addEventListener('click',()=>{
+      ShowBoxes_Little.style.display='none'
+})
+stars.forEach((star) => {
+    star.addEventListener('click', () => {
+        console.log("Hey I am star");
+        if(ShowBoxes_Little.style.display=='block'){
+             ShowBoxes_Little.style.display='none'
+        }else{
+           ShowBoxes_Little.style.display='block'
+        }
+    });
+});
